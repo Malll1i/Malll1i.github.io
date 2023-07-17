@@ -1,13 +1,251 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  background-color: #fff;
+  color: #222;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
 }
+
+.wrapper{
+  width: 1280px;
+  margin: 50px auto;
+}
+
+/* header */
+
+.logo{
+  font-weight: 600;
+  font-size: 20px;
+}
+
+
+.presentation{
+  margin: 50px 0;
+  background-image: url('./pic/bcki.jpg');
+  width: 100%;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-blend-mode: multiply;
+  background-color: #bcbcbc ;
+  position: relative;
+}
+
+.presentation::after{
+  content: 'Товары для вашего дома';
+  position: absolute;
+  top: 120px;
+  left: 50px;
+  width: 300px;
+  font-size: 40px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.presentation::before{
+  content: 'По доступной цене';
+  position: absolute;
+  top: 230px;
+  left: 50px;
+  width: 300px;
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.header-info{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+}
+
+.links a{
+    padding-left: 25px;
+    cursor: pointer;
+}
+
+.links a:hover{
+  opacity: 0.5;
+  transition: opacity 500ms ease;
+}
+
+.shop-cart{
+  cursor: pointer;
+  transition: color 500ms ease;
+}
+
+.shop-cart:hover,
+.shop-cart:active{
+  color: #dc3d3d;
+}
+
+header .cart-window .item{
+  width: 100%;
+  float: left;
+  margin-bottom: 20px;
+}
+
+header .cart-window .item img{
+  height: 70px;
+  width: 70px;
+  float: left;
+  margin-right: 20px;
+}
+
+header .cart-window .item h2{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+header .cart-window .item p{
+  color: #727272;
+  font-weight: 600;
+}
+
+.cart-window{
+  position: absolute;
+  top: 50px;
+  width: 429px;
+  box-shadow: 9px 9px 46px 10px rgba(34, 60, 80, 0.2);
+  z-index: 100;
+  background-color: #f2f2f2;
+  margin-left: 65%;
+
+
+  padding: 20px 0px 0px 20px;
+}
+
+.delete-icon{
+  color: rgba(56, 73, 143, 0.553);
+  font-size: 20px;
+  float: right;
+  position: relative;
+  top: -25px;
+  margin-right: 5%;
+}
+
+.delete-icon:hover{
+  color: #dc3d3d;
+  cursor: pointer;
+
+
+  transition: color 500ms ease;
+  transform: scale(1.2);
+  transition: transform 500ms ease;
+}
+
+.sum{
+  font-size: 20px;
+  float: left;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.categories div{
+  display: inline-flex;
+  background-color: #f2f2f2;
+  border-radius: 50px;
+  padding: 10px 20px;
+  margin-bottom: 25px;
+  margin-right: 15px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 500ms ease;
+}
+
+.categories div:hover{
+  border-color: silver;
+  transform: scale(1.1);
+}
+
+/* main */
+
+main{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.empty h2{
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.item{
+  width: 30%;
+  margin-bottom: 50px;
+  background: #f5f5f5;
+  overflow: hidden;
+}
+
+.full-item img, .item img{
+  width: 100%;
+  height: 70%;
+  border-radius: 10px 10px 0 0;
+  transition: transform 500ms ease;
+  cursor: pointer;
+}
+
+.item img:hover{
+  transform: scale(1.05);
+}
+
+main h2, main p, main b{
+  margin: 10px 20px;
+  color: #333;
+}
+
+.full-item b, main b{
+  color: #2c9da5;
+}
+
+.full-item, .add-to-cart {
+  font-size: 25px;
+  margin: 10px 20px;
+  cursor: pointer;
+  transition: transform 500ms ease;
+}
+
+.full-item, .add-to-cart:hover { 
+  transform:translateY(-5px);
+}
+
+.full-item{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(34, 34, 34, 0.817);
+  z-index: 1100;
+  overflow: auto;
+}
+
+.full-item > div{
+  width: 600px;
+  position: relative;
+  margin: 10% auto;
+  padding: 40px 30px;
+  background-color: #fff;
+  border-radius: 9px;
+}
+
+/* footer */
+
+footer{
+  text-align: center;
+  margin-left: 0 auto;
+}
+
+
