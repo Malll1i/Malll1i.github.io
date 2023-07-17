@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Malll1i.github.io/static/css/main.3b5874d5.css",
+    "main.js": "/Malll1i.github.io/static/js/main.3eb263ec.js",
+    "static/media/bcki.jpg": "/Malll1i.github.io/static/media/bcki.58ad311434a7f9e3ef8e.jpg",
+    "index.html": "/Malll1i.github.io/index.html",
+    "main.3b5874d5.css.map": "/Malll1i.github.io/static/css/main.3b5874d5.css.map",
+    "main.3eb263ec.js.map": "/Malll1i.github.io/static/js/main.3eb263ec.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3b5874d5.css",
+    "static/js/main.3eb263ec.js"
+  ]
+}
